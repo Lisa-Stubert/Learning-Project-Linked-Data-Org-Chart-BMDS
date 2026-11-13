@@ -1,0 +1,561 @@
+{
+  "title": "Organization chart",
+  "description": "Organization chart for Berlin's administration",
+  "version": "0.0.1",
+  "definitions": {
+    "additionalProperties": false,
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Titel"
+        },
+        "paperSize": {
+          "type": "string",
+          "title": "Ausgabegröße",
+          "default": "A4",
+          "enum": ["A5", "A4", "A3", "A2", "A1", "A0"]
+        },
+        "schemaVersion": {
+          "type": "string",
+          "title": "Schema",
+          "default": "0.0.1"
+        },
+        "paperOrientation": {
+          "type": "string",
+          "title": "Orientierung",
+          "default": "landscape",
+          "enum": ["landscape", "portrait"],
+          "enumNames": ["Querformat", "Hochformat"]
+        },
+        "logo": {
+          "title": "Logo",
+          "type": "string",
+          "format": "data-url"
+        },
+        "version": {
+          "type": "string",
+          "format": "date",
+          "title": "Version"
+        },
+        "creator": {
+          "type": "string",
+          "title": "Verfasser:in"
+        },
+        "note": {
+          "type": "string",
+          "title": "Fußzeile"
+        },
+        "uri": {
+          "$ref": "#/definitions/uri"
+        }
+      },
+      "required": ["title"],
+      "title": "Document"
+    },
+    "organisation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "isMainOrganisation": {
+          "type": "boolean",
+          "default": false,
+          "title": "Als Hauptorganisation festlegen"
+        },
+        "type": {
+          "type": "string",
+          "examples": [
+            "Abteilung",
+            "Amt",
+            "Bezirksamt",
+            "Büro",
+            "Fachbereich",
+            "Fachdienst",
+            "Landesamt",
+            "Landesstelle",
+            "Museum",
+            "Other",
+            "Referat",
+            "Senatskanzlei",
+            "Senatsverwaltung",
+            "Serviceeinheit",
+            "Öffentliches Unternehmen",
+            "Unternehmen"
+          ],
+          "title": "Art der Organisation/Einheit"
+        },
+        "name": {
+          "type": "string",
+          "title": "Bezeichnung"
+        },
+        "altName": {
+          "type": "string",
+          "title": "Kürzel"
+        },
+        "layout": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "style": {
+              "type": "string",
+              "title": "Stil",
+              "default": "default",
+              "enum": ["default", "emphasized", "light", "hide"],
+              "enumNames": [
+                "Standard",
+                "Hervorgehoben",
+                "Zurückgenommen",
+                "Verbindung"
+              ]
+            },
+            "bgColor": {
+              "title": "Hintergrundfarbe",
+              "type": "string",
+              "default": "",
+              "enum": [
+                "",
+                "#36349D",
+                "#4DFFB0",
+                "#DB0045",
+                "#E3E6F2",
+                "#333333",
+                "#666666",
+                "#999999",
+                "#cccccc",
+                "#e6e6e6",
+                "#f2f2f2"
+              ],
+              "enumNames": [
+                "Standard",
+                "Kosmisches Blau",
+                "Minze",
+                "Kirsche",
+                "Lavendelgrau",
+                "Schwarz 80%",
+                "Schwarz 60%",
+                "Schwarz 40%",
+                "Schwarz 20%",
+                "Schwarz 10%",
+                "Schwarz 5%"
+              ]
+            },
+            "bgStyle": {
+              "title": "Hintergrund Stil",
+              "type": "string",
+              "default": "default",
+              "enum": ["default", "half"],
+              "enumNames": ["Voll", "Halb"]
+            },
+            "grid": {
+              "title": "Anordnung",
+              "type": "string",
+              "default": "none",
+              "enum": ["none", "grid2"],
+              "enumNames": ["Untereinander", "2 Reihen"]
+            }
+          },
+          "title": "Gestaltung"
+        },
+        "address": {
+          "$ref": "#/definitions/address"
+        },
+        "contact": {
+          "$ref": "#/definitions/contact"
+        },
+        "uri": {
+          "$ref": "#/definitions/uri"
+        },
+        "positions": {
+          "title": "Positionen",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/position"
+          }
+        },
+        "departments": {
+          "type": "array",
+          "title": "Zugehörige Organisationseinheiten",
+          "items": {
+            "$ref": "#/definitions/department"
+          }
+        },
+        "organisations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/organisation"
+          }
+        },
+        "relationship": {
+          "type": "string",
+          "format": "integer"
+        },
+        "suborganizationOrientation": {
+          "type": "string",
+          "title": "Suborganisation Anordnen",
+          "default": "horizontal",
+          "enum": ["vertical", "horizontal"],
+          "enumNames": ["Vertikal", "Horizontal"]
+        }
+      },
+
+      "required": ["id", "name"],
+      "title": "Organisation"
+    },
+    "department": {
+      "type": "object",
+      "additionalProperties": false,
+      "title": "Zugehörige Organisationseinheit",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Abteilung/Stellenbezeichnung",
+          "default": "Neue Organisationsuntereinheit"
+        },
+        "purpose": {
+          "type": "string",
+          "title": "Beschreibung"
+        },
+        "type": {
+          "type": "string",
+          "examples": [
+            "Abteilung",
+            "Amt",
+            "Bezirksamt",
+            "Büro",
+            "Fachbereich",
+            "Fachdienst",
+            "Landesamt",
+            "Landesstelle",
+            "Museum",
+            "Other",
+            "Referat",
+            "Senatskanzlei",
+            "Senatsverwaltung",
+            "Serviceeinheit",
+            "Öffentliches Unternehmen",
+            "Unternehmen"
+          ],
+          "title": "Art der Organisationseinheiten"
+        },
+        "uri": {
+          "$ref": "#/definitions/uri"
+        },
+        "positions": {
+          "title": "Positionen",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/position"
+          }
+        }
+      }
+    },
+    "position": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "positionType": {
+          "type": "string",
+          "title": "Art der Rolle",
+          "examples": [
+            "Büroleiter:in",
+            "Pressesprecher:in",
+            "Referent:in",
+            "Senator:in",
+            "Staatssekretär:in"
+          ]
+        },
+        "positionStatus": {
+          "type": "string",
+          "title": "Zusatzbezeichnung",
+          "examples": ["stellvertretend", "kommissarisch", "N.N."]
+        },
+        "uri": {
+          "$ref": "#/definitions/uri"
+        },
+        "person": {
+          "$ref": "#/definitions/person"
+        }
+      }
+    },
+    "person": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+       "highlight": {
+          "type": "boolean",
+          "title": "hervorheben",
+          "default": false
+        },
+        "salutation": {
+          "type": "string",
+          "title": "Anrede"
+        },
+        "title": {
+          "type": "string",
+          "title": "Titel"
+        },
+       "officialStatus": {
+          "type": "string",
+          "title": "Amtsbezeichnungsstatus",
+          "examples": ["example"]
+        },
+        "firstName": {
+          "type": "string",
+          "title": "Vorname"
+        },
+        "lastName": {
+          "type": "string",
+          "title": "Nachname"
+        },
+        "gender": {
+          "type": "string",
+          "title": "Geschlecht",
+          "default": "1",
+          "enum": ["m", "w", "d", "1"],
+          "enumNames": ["Männlich", "Weiblich", "Divers", "ohne Angabe"]
+        },
+        "contact": {
+          "$ref": "#/definitions/contact"
+        },
+        "uri": {
+          "$ref": "#/definitions/uri"
+        }
+      },
+      "title": "Person"
+    },
+    "sameAsInfo": {
+      "type": "object",
+      "title": "Information about same as URI",
+      "additionalProperties": false,
+      "properties": {
+        "uriSameAs": {
+          "title": "Externe Verknüpfung",
+          "type": "string"
+        },
+        "uriSameAsLabel": {
+          "title": "URI Label",
+          "type": "string"
+        },
+        "uriSameAsDescription": {
+          "title": "URI Description",
+          "type": "string"
+        }
+      }
+    },
+    "uri": {
+      "title": "Verknüpfungen (URIs)",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "uri": {
+          "title": "URI",
+          "type": "string"
+        },
+        "sameAsUris": {
+          "type": "array",
+          "title": "Externe Verknüpfung",
+          "items": {
+            "$ref": "#/definitions/sameAsInfo"
+          }
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "telephone": {
+          "type": "string",
+          "title": "Telefonnummer"
+        },
+        "fax": {
+          "type": "string",
+          "title": "Faxnummer"
+        },
+        "email": {
+          "type": "string",
+          "title": "E-Mail"
+        },
+        "website": {
+          "type": "string",
+          "title": "Website"
+        }
+      },
+      "title": "Kontaktdaten"
+    },
+    "address": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "street": {
+          "type": "string",
+          "title": "Straße"
+        },
+        "housenumber": {
+          "type": "string",
+          "title": "Hausnummer"
+        },
+        "building": {
+          "type": "string",
+          "title": "Gebäude"
+        },
+        "room": {
+          "type": "string",
+          "title": "Raum"
+        },
+        "zipCode": {
+          "type": "string",
+          "format": "int32",
+          "title": "PLZ"
+        },
+        "city": {
+          "type": "string",
+          "title": "Stadt"
+        }
+      },
+      "title": "Anschrift"
+    },
+    "export": {
+      "title": "Export Options",
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string",
+          "title": "Dateiname"
+        },
+        "saveExport": {
+          "type": "string",
+          "title": "Möchten Sie das Dokument zur erneuten Bearbeitung in einem maschinenlesbaren Format speichern oder das fertige Organigramm exportieren?",
+          "default": "save",
+          "enum": ["save", "export"],
+          "enumNames": ["Speichern", "Exportieren"]
+        }
+      },
+      "dependencies": {
+        "saveExport": {
+          "oneOf": [
+            {
+              "properties": {
+                "saveExport": {
+                  "enum": ["save"]
+                }
+              }
+            },
+            {
+              "properties": {
+                "saveExport": {
+                  "enum": ["export"]
+                },
+                "includeLogo": {
+                  "type": "boolean",
+                  "title": "Logo beim Exportieren einbetten",
+                  "default": true
+                },
+                "exportType": {
+                  "type": "string",
+                  "title": "Dateiformat",
+                  "default": "pdf",
+                  "enum": ["json", "png", "pdf", "rdf"],
+                  "enumNames": ["JSON", "PNG", "PDF", "RDF"]
+                }
+              }
+            }
+          ]
+        },
+        "exportType": {
+          "oneOf": [
+            {
+              "properties": {
+                "exportType": {
+                  "enum": ["json"]
+                },
+                "excludePersonalData": {
+                  "type": "boolean",
+                  "title": "Personenbezogene Daten NICHT exportieren",
+                  "default": false
+                }
+              }
+            },
+            {
+              "properties": {
+                "exportType": {
+                  "enum": ["svg"]
+                }
+              }
+            },
+            {
+              "properties": {
+                "exportType": {
+                  "enum": ["png"]
+                }
+              }
+            },
+            {
+              "properties": {
+                "exportType": {
+                  "enum": ["pdf"]
+                }
+              }
+            },
+            {
+              "properties": {
+                "exportType": {
+                  "enum": ["rdf"]
+                },
+                "rdfType": {
+                  "type": "string",
+                  "title": "RDF Format",
+                  "default": "json-ld",
+                  "enum": ["json-ld", "nquads", "turtle"],
+                  "enumNames": ["JSON-LD", "N-Quads", "Turtle"]
+                },
+                "excludePersonalData": {
+                  "type": "boolean",
+                  "title": "Personenbezogene Daten NICHT exportieren",
+                  "default": false
+                },
+                "baseUri": {
+                  "type": "string",
+                  "title": "Basis URI ändern",
+                  "default": ""
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "settings": {
+      "title": "Settings Options",
+      "type": "object",
+      "properties": {
+        "validator": {
+          "type": "string",
+          "title": "Validierung (experimetelles Feature)",
+          "default": "",
+          "enum": ["", "berlinerVerwaltung"],
+          "enumNames": [
+            "keine Validierung",
+            "für die Berliner Verwaltung (in Bearbeitung)"
+          ]
+        }
+      }
+    }
+  },
+  "properties": {
+    "document": {
+      "$ref": "#/definitions/document"
+    },
+    "organisations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/organisation"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "organigram": "https://technologiestiftung.github.io/DATENREPO/DATENSATZ/",
+  "org": "http://www.w3.org/ns/org#",
+  "vcard": "http://www.w3.org/2006/vcard/ns#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "bundorgs": "https://technologiestiftung.github.io/lod-vocabulary-bund/bundorgs/",
+  "dcterms": "http://purl.org/dc/terms/",
+  "skos": "http://www.w3.org/2004/02/skos/core#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "schema": "https://schema.org/",
+  "xsd": "http://www.w3.org/2001/XMLSchema#"
+}

@@ -1,0 +1,307 @@
+{
+  "Bundesministerium": {
+    "vocab": "bundorgs",
+    "name": "Bundesministerium",
+    "type": "org"
+  },
+  "Sonstige Organisationseinheit": {
+    "vocab": "bundorgs",
+    "name": "Organisationseinheit",
+    "type": "org"
+  },
+  "Staatssekretär": {
+    "vocab": "bundorgs",
+    "name": "StaatssekretaerInOrgUnit",
+    "type": "org"
+  },
+  "Parlamentarischer Staatssekretär": {
+    "vocab": "bundorgs",
+    "name": "ParlamentarischeRStaatssekretaerInOrgUnit",
+    "type": "org"
+  },
+  "Referat": {
+    "vocab": "bundorgs",
+    "name": "Referat",
+    "type": "org"
+  },
+  "Abteilung": {
+    "vocab": "bundorgs",
+    "name": "Abteilung",
+    "type": "org"
+  },
+  "Unterabteilung": {
+    "vocab": "bundorgs",
+    "name": "Unterabteilung",
+    "type": "org"
+  },
+  "Stabsstelle": {
+    "vocab": "bundorgs",
+    "name": "Stabsstelle",
+    "type": "org"
+  },
+  "Arbeitsgruppe": {
+    "vocab": "bundorgs",
+    "name": "Arbeitsgruppe",
+    "type": "org"
+  },
+  "Sonderaufgabe": {
+    "vocab": "bundorgs",
+    "name": "Sonderaufgabe",
+    "type": "org"
+  },
+  "Pressestelle": {
+    "vocab": "bundorgs",
+    "name": "Pressestelle",
+    "type": "org"
+  },
+  "Projektgruppe": {
+    "vocab": "bundorgs",
+    "name": "Projektgruppe",
+    "type": "org"
+  },
+  "Koordinierungsstelle": {
+    "vocab": "bundorgs",
+    "name": "Koordinierungsstelle",
+    "type": "org"
+  },
+  "Koordinierungsstelle Klimaneutrale Bundesverwaltung": {
+    "vocab": "bundorgs",
+    "name": "KoordinierungsstelleKlimaneutraleBundesverwaltung",
+    "type": "org"
+  },
+  "Sozialer Dienst": {
+    "vocab": "bundorgs",
+    "name": "SozialerDienst",
+    "type": "org"
+  },
+  "Ärztlicher Dienst": {
+    "vocab": "bundorgs",
+    "name": "AerztlicherDienst",
+    "type": "org"
+  },
+  "Registratur": {
+    "vocab": "bundorgs",
+    "name": "Registratur",
+    "type": "org"
+  },
+  "Steuerung":{
+    "vocab": "bundorgs",
+    "name": "Steuerung",
+    "type": "org"
+  },
+  "Hausservice": {
+    "vocab": "bundorgs",
+    "name": "Hausservice",
+    "type": "org"
+  },
+  "Beratungsgremium": {
+    "vocab": "bundorgs",
+    "name": "Beratungsgremium",
+    "type": "org"
+  },
+  "Leitung der Organisationseinheit": {
+    "vocab": "bundorgs",
+    "name": "Leitung",
+    "type": "position"
+  },
+  "Bundesminister:in": {
+    "vocab": "bundorgs",
+    "name": "BundesministerIn",
+    "type": "position"
+  },
+  "Staatssekretär:in": {
+    "vocab": "bundorgs",
+    "name": "StaatssekretaerIn",
+    "type": "position"
+  },
+  "Parlamentarische:r Staatssekretär:in": {
+    "vocab": "bundorgs",
+    "name": "ParlamentarischeRStaatssekretaerIn",
+    "type": "position"
+  },
+  "Abteilungsleitung": {
+    "vocab": "bundorgs",
+    "name": "Abteilungsleitung",
+    "type": "position"
+  },
+  "Referatsleitung": {
+    "vocab": "bundorgs",
+    "name": "Referatsleitung",
+    "type": "position"
+  },
+  "Unterabteilungsleitung": {
+    "vocab": "bundorgs",
+    "name": "Unterabteilungsleitung",
+    "type": "position"
+  },
+  "Ständige:r Vertreter:in": {
+    "vocab": "bundorgs",
+    "name": "StaendigeRVertreterIn",
+    "type": "position"
+  },
+  "Persönliche:r Referent:in": {
+    "vocab": "bundorgs",
+    "name": "PersoenlicheRReferentIn",
+    "type": "position"
+  },
+  "Pressesprecher:in": {
+    "vocab": "bundorgs",
+    "name": "PressesprecherIn",
+    "type": "position"
+  },
+  "Sonstige:r Beauftragte:r": {
+    "vocab": "bundorgs",
+    "name": "BeauftragteR",
+    "type": "position"
+  },
+  "Sekretär:in": {
+    "vocab": "bundorgs",
+    "name": "SekretaerIn",
+    "type": "position"
+  },
+  "Sonstige:r Vertretunger:in": {
+    "vocab": "bundorgs",
+    "name": "VertreterIn",
+    "type": "position"
+  },
+  "Datenschutzbeauftragte:r": {
+    "vocab": "bundorgs",
+    "name": "DatenschutzbeauftragteR",
+    "type": "position"
+  },
+  "Gleichstellungsbeauftragte:r": {
+    "vocab": "bundorgs",
+    "name": "GleichstellungsbeauftragteR",
+    "type": "position"
+  },
+  "Personalrat": {
+    "vocab": "bundorgs",
+    "name": "Personalrat",
+    "type": "position"
+  },
+  "Schwerbehindertenvertretung": {
+    "vocab": "bundorgs",
+    "name": "Schwerbehindertenvertretung",
+    "type": "position"
+  },
+  "Auszubildendenvertretung": {
+    "vocab": "bundorgs",
+    "name": "Auszubildendenvertretung",
+    "type": "position"
+  },
+  "Ansprechperson für Korruptionsprävention": {
+    "vocab": "bundorgs",
+    "name": "AnsprechpersonKorruptionspraevention",
+    "type": "position"
+  },
+  "Beauftragte:r für Sponsoring": {
+    "vocab": "bundorgs",
+    "name": "BeauftragteRFuerSponsoring",
+    "type": "position"
+  },
+  "Beauftragte:r für den Haushalt": {
+    "vocab": "bundorgs",
+    "name": "BeauftragteRFuerDenHaushalt",
+    "type": "position"
+  },
+  "Informationssicherheitsbeauftragte:r": {
+    "vocab": "bundorgs",
+    "name": "InformationssicherheitsbeauftragteR",
+    "type": "position"
+  },
+  "Vertrauensperson der schwerbehinderten Menschen": {
+    "vocab": "bundorgs",
+    "name": "VertrauenspersonSchwerbehinderteMenschen",
+    "type": "position"
+  },
+  "Hauptpersonalrat": {
+    "vocab": "bundorgs",
+    "name": "Hauptpersonalrat",
+    "type": "position"
+  },
+  "Interne Revision": {
+    "vocab": "bundorgs",
+    "name": "InterneRevision",
+    "type": "position"
+  },
+  "Geheimschutzbeauftragte:r": {
+    "vocab": "bundorgs",
+    "name": "GeheimschutzbeauftragteR",
+    "type": "position"
+  },
+  "Staatsminister:in": {
+    "vocab": "bundorgs",
+    "name": "StaatsministerIn",
+    "type": "position"
+  },
+  "Protokoll": {
+    "vocab": "bundorgs",
+    "name": "Protokoll",
+    "type": "position"
+  },
+  "N.N.": {
+    "vocab": "bundorgs",
+    "name": "Unbesetzt",
+    "type": "positionStatus"
+  },
+  "Gesperrt": {
+    "vocab": "bundorgs",
+    "name": "Gesperrt",
+    "type": "positionStatus"
+  },
+  "Geplant": {
+    "vocab": "bundorgs",
+    "name": "Gesperrt",
+    "type": "positionStatus"
+  },
+  "Ist Ansprechperson bis auf Weiteres": {
+    "vocab": "bundorgs",
+    "name": "VertretenDurchAnsprechperson",
+    "type": "positionStatus"
+  },
+  "Kommissarisch wahrgenommen": {
+    "vocab": "bundorgs",
+    "name": "KommissarischWahrgenommen",
+    "type": "positionStatus"
+  },
+  "Stellvertretend wahrgenommen": {
+    "vocab": "bundorgs",
+    "name": "StellvertretendWahrgenommen",
+    "type": "positionStatus"
+  },
+  "RD": {
+    "vocab": "bundorgs",
+    "name": "RD",
+    "type": "officialStatus"
+  },
+  "MinDir": {
+    "vocab": "bundorgs",
+    "name": "MinDir",
+    "type": "officialStatus"
+  },
+  "MinDirig": {
+    "vocab": "bundorgs",
+    "name": "MinDirig",
+    "type": "officialStatus"
+  },
+  "MinR": {
+    "vocab": "bundorgs",
+    "name": "MinR",
+    "type": "officialStatus"
+  },
+  "ORR": {
+    "vocab": "bundorgs",
+    "name": "ORR",
+    "type": "officialStatus"
+  },
+  "RR": {
+    "vocab": "bundorgs",
+    "name": "RR",
+    "type": "officialStatus"
+  },
+  "TB": {
+    "vocab": "bundorgs",
+    "name": "TB",
+    "type": "officialStatus"
+  }
+}

@@ -1,0 +1,241 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$font-family-sans-serif: "Open Sans", system-ui, -apple-system, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// 3. Include remainder of required Bootstrap stylesheets
+
+@import "./theme";
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/OpenSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/OpenSans-SemiBold.ttf") format("truetype");
+}
+
+html,
+body {
+  background-color: $white;
+  font-family: $font-family-sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.btn {
+  .person-name {
+    float: left;
+    margin-left: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+  }
+}
+
+.btn.btn-light {
+  border: none;
+  svg {
+    path {
+      fill: $primary;
+      stroke-width: 0.5px;
+      stroke: $primary;
+    }
+  }
+  &:hover {
+    background-color: $gray-400;
+    svg {
+      path {
+        fill: $primary;
+        stroke: $primary;
+      }
+    }
+  }
+  &.active {
+    background-color: $primary;
+    svg {
+      path {
+        fill: $white;
+        stroke: $white;
+      }
+    }
+  }
+  &.btn-danger {
+    svg {
+      path {
+        fill: $danger;
+        stroke-width: 0.5px;
+        stroke: $danger;
+      }
+    }
+    &:hover {
+      background-color: $gray-400;
+      svg {
+        path {
+          fill: $danger;
+          stroke: $danger;
+        }
+      }
+    }
+  }
+}
+
+.customDropdown {
+  position: relative;
+  svg {
+    right: 10px;
+    position: relative;
+    float: right;
+    top: 40px;
+    pointer-events: none;
+  }
+}
+.react-joyride {
+  &-portal {
+    overflow: hidden;
+    max-height: 100vh;
+    max-width: 100vw;
+  }
+
+  &__overlay {
+    overflow: hidden;
+    max-height: 100vh;
+    max-width: 100vw;
+  }
+}
+
+.dropdown-menu {
+  box-shadow: rgba($gray-600, 0.5) 0px 8px 24px;
+  .btn-danger {
+    color: $danger;
+  }
+}
+
+.control-layer {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  display: flex;
+  flex-basis: auto;
+  overflow: hidden;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 0;
+  .navbar {
+    pointer-events: none;
+    margin-bottom: 0.25rem;
+    .navbar-nav {
+      .btn-group {
+        pointer-events: all;
+        box-shadow: rgba($gray-700, 0.2) 0px 1px 2px;
+        border-radius: $border-radius;
+        .btn.btn-light {
+          background-color: $white;
+          &:hover {
+            background-color: $gray-400;
+          }
+          &.active {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+  .split-container {
+    display: flex;
+    flex-direction: row;
+    flex-basis: auto;
+    opacity: 0;
+    overflow: hidden;
+    max-height: calc(100vh - 5rem);
+    pointer-events: none;
+    .sidebar {
+      opacity: 0;
+      transition: opacity 0.4s ease-out;
+    }
+    &.open {
+      transform: none;
+      opacity: 1;
+      .sidebar {
+        position: relative;
+        opacity: 1;
+        pointer-events: all;
+        overflow-y: auto;
+        background-color: $white;
+        box-shadow: rgba($gray-700, 0.2) 0px 1px 2px;
+        margin: 2px 0;
+        border-radius: $border-radius;
+        .tab {
+          background-color: $white;
+          padding: 0.75rem;
+          form.rjsf {
+            .form-control {
+              padding: 0.25rem 0.5rem;
+              font-size: 0.875rem;
+              border-radius: 0.2rem;
+            }
+          }
+        }
+        .uri-ui {
+          .rbt-input-multi.disabled {
+            background-color: $white;
+          }
+        }
+      }
+      .gutter {
+        background-repeat: no-repeat;
+        background-position: 50%;
+        pointer-events: all;
+      }
+
+      .gutter.gutter-horizontal {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
+        cursor: col-resize;
+      }
+
+      .gutter.gutter-vertical {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=");
+        cursor: row-resize;
+      }
+    }
+  }
+
+  .same-as {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    cursor: default;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+
+    button {
+      top: 0;
+      right: 0;
+      position: absolute;
+      z-index: 10;
+    }
+  }
+
+  // Hide hint input from Typeahead which is not needed
+  .rbt-input-hint {
+    display: none;
+  }
+}
