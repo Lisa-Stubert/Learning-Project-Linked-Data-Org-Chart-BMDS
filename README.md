@@ -76,34 +76,3 @@ Where possible, avoid gendered position titles. If a gendered title is needed, u
 This fork builds on the work of the original [Organigramming Berlin project](https://github.com/technologiestiftung/organigramming-berlin). The original project was developed by Technologiestiftung Berlin and ODIS, with support from the Berlin Senate Chancellery and Investitionsbank Berlin using funds from the State of Berlin.
 
 The application also relies on Dabeng's [react-orgchart](https://github.com/dabeng/react-orgchart), based on Wesnolte's [jOrgChart](https://github.com/wesnolte/jOrgChart). The icons used in the application come from [Bootstrap Icons](https://icons.getbootstrap.com/).
-
-## Original project contributors
-
-The following contributors are credited for their work on the original project ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center"><a href="https://github.com/Lisa-Stubert"><img src="https://avatars.githubusercontent.com/u/61182572?v=4?s=64" width="64px;" alt="Lisa-Stubert"/><br /><sub><b>Lisa-Stubert</b></sub></a><br /><a href="https://github.com/technologiestiftung/organigramming-berlin/commits?author=Lisa-Stubert" title="Code">💻</a> <a href="#data-Lisa-Stubert" title="Data">🔣</a></td>
-      <td align="center"><a href="https://github.com/ester-t-s"><img src="https://avatars.githubusercontent.com/u/91192024?v=4?s=64" width="64px;" alt="Ester"/><br /><sub><b>Ester</b></sub></a><br /><a href="https://github.com/technologiestiftung/organigramming-berlin/commits?author=ester-t-s" title="Code">💻</a> <a href="#data-ester-t-s" title="Data">🔣</a></td>
-      <td align="center"><a href="https://github.com/tihartma"><img src="https://avatars.githubusercontent.com/u/15090548?v=4?s=64" width="64px;" alt="tihartma"/><br /><sub><b>tihartma</b></sub></a><br /><a href="https://github.com/technologiestiftung/organigramming-berlin/commits?author=tihartma" title="Code">💻</a></td>
-      <td align="center"><a href="https://github.com/dnsos"><img src="https://avatars.githubusercontent.com/u/15640196?v=4?s=64" width="64px;" alt="Dennis Ostendorf"/><br /><sub><b>Dennis Ostendorf</b></sub></a><br /><a href="https://github.com/technologiestiftung/organigramming-berlin/commits?author=dnsos" title="Code">💻</a></td>
-      <td align="center"><a href="https://vogelino.com/"><img src="https://avatars.githubusercontent.com/u/2759340?v=4?s=64" width="64px;" alt="Lucas Vogel"/><br /><sub><b>Lucas Vogel</b></sub></a><br /><a href="https://github.com/technologiestiftung/organigramming-berlin/commits?author=vogelino" title="Documentation">📖</a></td>
-      <td align="center"><a href="https://fabianmoronzirfas.me"><img src="https://avatars.githubusercontent.com/u/315106?v=4?s=64" width="64px;" alt="Fabian Morón Zirfas"/><br /><sub><b>Fabian Morón Zirfas</b></sub></a><br /><a href="#infra-ff6347" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
-      <td align="center"><a href="https://github.com/m-b-e"><img src="https://avatars.githubusercontent.com/u/36029603?v=4?s=64" width="64px;" alt="Max B. Eckert"/><br /><sub><b>Max B. Eckert</b></sub></a><br /><a href="https://github.com/technologiestiftung/organigramming-berlin/commits?author=m-b-e" title="Code">💻</a></td>
-    </tr>
-    <tr>
-      <td align="center"><a href="https://hanshack.com/"><img src="https://avatars.githubusercontent.com/u/8025164?v=4?s=64" width="64px;" alt="Hans Hack"/><br /><sub><b>Hans Hack</b></sub></a><br /><a href="https://github.com/technologiestiftung/organigramming-berlin/commits?author=hanshack" title="Code">💻</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
